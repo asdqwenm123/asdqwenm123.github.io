@@ -39,16 +39,13 @@ function main() {
     "$3_per_pe": $3_per_pe,
   }
 
-  fetch('http://49.173.6.131:5000/score', {
+  fetch('https://asdqwenm123.mcv.kr:5000/score', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(js)
-  })
-    .then(response => response.json())
-    .then(data => console.log('Success:', data))
-    .catch((error) => console.error('Error:', error));
+  });
 
   document.getElementById("last").innerHTML = real_last + "(" + ABCDE + ")";
 }
