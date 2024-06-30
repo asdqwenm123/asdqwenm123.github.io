@@ -25,5 +25,30 @@ function main() {
   } else {
     ABCDE = "E";
   }
+
+  const js = {
+    "mid_ex_sc": mid_ex_sc,
+    "mid_ex_per": mid_ex_per,
+    "last_ex_sc": last_ex_sc,
+    "last_ex_per": last_ex_per,
+    "$1_per_sc": $1_per_sc,
+    "$1_per_pe": $1_per_pe,
+    "$2_per_sc": $2_per_sc,
+    "$2_per_pe": $2_per_pe,
+    "$3_per_sc": $3_per_sc,
+    "$3_per_pe": $3_per_pe,
+  }
+
+  fetch('http://49.173.6.131:5000/score', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(js)
+  })
+    .then(response => response.json())
+    .then(data => console.log('Success:', data))
+    .catch((error) => console.error('Error:', error));
+
   document.getElementById("last").innerHTML = real_last + "(" + ABCDE + ")";
 }
