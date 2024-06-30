@@ -39,7 +39,7 @@ function main() {
     "$3_per_pe": $3_per_pe,
   }
 
-  fetch('https://asdqwenm123.mcv.kr:5000/score', {
+  fetch('https://asdqwenm123.mcv.kr/score', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
