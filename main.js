@@ -1,5 +1,6 @@
 function main() {
   // const subject = document.getElementById('subject');
+  const name = document.getElementById("name").value;
   const mid_ex_sc = isNaN(parseFloat(document.getElementById("mid_ex_sc").value)) ? 0 : parseFloat(document.getElementById("mid_ex_sc").value);
   const mid_ex_per = isNaN(parseFloat(document.getElementById("mid_ex_pe").value)) ? 0 : parseFloat(document.getElementById("mid_ex_pe").value);
   const last_ex_sc = isNaN(parseFloat(document.getElementById("last_ex_sc").value)) ? 0 : parseFloat(document.getElementById("last_ex_sc").value);
@@ -27,6 +28,7 @@ function main() {
   }
 
   const js = {
+    "name": name,
     "mid_ex_sc": mid_ex_sc,
     "mid_ex_per": mid_ex_per,
     "last_ex_sc": last_ex_sc,

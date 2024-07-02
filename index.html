@@ -14,9 +14,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 150vh;
+            /*height: 150vh;*/
         }
         .container {
+            margin-top: 20px;
+            margin-bottom: 20px;
             width: 90%;
             max-width: 700px;
             background: white;
@@ -73,25 +75,27 @@
     <h1>새론중학교 절대평가 등급 계산기</h1>
     <h2>지필평가</h2>
     <div>
+        <p>이름(선택적 입력)</p>
+        <input type="text" id="name">
         <p>중간고사</p>
         <input type="text" id="mid_ex_sc">
         <p>중간 반영 비율</p>
-        <input type="text" id="mid_ex_pe">
+        <input type="text" id="mid_ex_pe" value="30">
         <p>기말고사</p>
         <input type="text" id="last_ex_sc">
         <p>기말 반영 비율</p>
-        <input type="text" id="last_ex_pe">
+        <input type="text" id="last_ex_pe" value="30">
     </div>
     <h2>수행평가(친 횟수만큼만 입력)</h2>
     <div>
         <p>첫 번째 수행</p>
         <input type="text" id="1_per_sc">
         <p>첫 번째 수행 반영 비율</p>
-        <input type="text" id="1_per_pe">
+        <input type="text" id="1_per_pe" value="20">
         <p>두 번째 수행</p>
         <input type="text" id="2_per_sc">
         <p>두 번째 수행 반영 비율</p>
-        <input type="text" id="2_per_pe">
+        <input type="text" id="2_per_pe" value="20">
         <p>세 번째 수행</p>
         <input type="text" id="3_per_sc">
         <p>세 번째 수행 반영 비율</p>
